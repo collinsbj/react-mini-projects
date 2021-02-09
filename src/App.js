@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import projects from "./projects";
+
+const convertToKebabCase = (string) => {
+  return string
+    .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+    .map((x) => x.toLowerCase())
+    .join("-");
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          {projects.map(({ name }) => {
+            return (
+              <Link
+                key={`link${convertToKebabCase(name)}`}
+                to={convertToKebabCase(name)}
+              >
+                <button>{name}</button>
+              </Link>
+            );
+          })}
+        </Route>
+        {projects.map(({ Component, name }) => {
+          return (
+            <Route
+              key={`route${convertToKebabCase(name)}`}
+              exact
+              path={`/${convertToKebabCase(name)}`}
+            >
+              {Component}
+            </Route>
+          );
+        })}
+      </Switch>
+    </BrowserRouter>
   );
 }
 
