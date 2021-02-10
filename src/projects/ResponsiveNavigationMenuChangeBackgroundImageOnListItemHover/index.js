@@ -21,7 +21,7 @@ export default function ResponsiveNavigationMenuChangeBackgroundImageOnListItemH
   };
 
   return (
-    <>
+    <div className={styles.projectWrapper}>
       <div
         role="button"
         className={clsx(styles.menuToggle, menuToggle && styles.active)}
@@ -67,6 +67,6 @@ export default function ResponsiveNavigationMenuChangeBackgroundImageOnListItemH
           <img alt="img1" src={navImage} id="slider"></img>
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import projects from "./projects";
 
@@ -14,16 +14,26 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          {projects.map(({ name }) => {
-            return (
-              <Link
-                key={`link${convertToKebabCase(name)}`}
-                to={convertToKebabCase(name)}
-              >
-                <button>{name}</button>
-              </Link>
-            );
-          })}
+          <div className={styles.buttonWrapper}>
+            {projects
+              .sort((a, b) => {
+                const nameA = a.name.toUpperCase();
+                const nameB = b.name.toUpperCase();
+                if (nameA < nameB) return -1;
+                if (nameA > nameB) return 1;
+                return 0;
+              })
+              .map(({ name }) => {
+                return (
+                  <Link
+                    key={`link${convertToKebabCase(name)}`}
+                    to={convertToKebabCase(name)}
+                  >
+                    <button>{name}</button>
+                  </Link>
+                );
+              })}
+          </div>
         </Route>
         {projects.map(({ Component, name }) => {
           return (

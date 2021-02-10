@@ -3,15 +3,25 @@ import styles from "./styles.module.css";
 export default function GlassmorphismPureCSSCircularProgressBar() {
   return (
     <div>
-      <section>
+      <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.card}>
             <div className={styles.box}>
               <div>
                 <div className={styles.percent}>
-                  <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
+                  <svg className={styles.svg}>
+                    <circle
+                      className={styles.circle}
+                      cx="70"
+                      cy="70"
+                      r="70"
+                    ></circle>
+                    <circle
+                      className={styles.circle}
+                      cx="70"
+                      cy="70"
+                      r="70"
+                    ></circle>
                   </svg>
                   <div className={styles.number}>
                     <h2>
@@ -28,9 +38,19 @@ export default function GlassmorphismPureCSSCircularProgressBar() {
             <div className={styles.box}>
               <div>
                 <div className={styles.percent}>
-                  <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
+                  <svg className={styles.svg}>
+                    <circle
+                      className={styles.circle}
+                      cx="70"
+                      cy="70"
+                      r="70"
+                    ></circle>
+                    <circle
+                      className={styles.circle}
+                      cx="70"
+                      cy="70"
+                      r="70"
+                    ></circle>
                   </svg>
                   <div className={styles.number}>
                     <h2>
@@ -47,9 +67,19 @@ export default function GlassmorphismPureCSSCircularProgressBar() {
             <div className={styles.box}>
               <div>
                 <div className={styles.percent}>
-                  <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
+                  <svg className={styles.svg}>
+                    <circle
+                      className={styles.circle}
+                      cx="70"
+                      cy="70"
+                      r="70"
+                    ></circle>
+                    <circle
+                      className={styles.circle}
+                      cx="70"
+                      cy="70"
+                      r="70"
+                    ></circle>
                   </svg>
                   <div className={styles.number}>
                     <h2>
