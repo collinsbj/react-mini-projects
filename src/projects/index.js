@@ -4,6 +4,7 @@ import CurtainLayerMenuResponsiveFullscreenOverlayNavigationMenu from "./Curtain
 import ResponsiveGlassmorphismCardHoverEffects from "./ResponsiveGlassmorphismCardHoverEffects";
 import ResponsiveNavigationMenuWithIconsHoverEffects from "./ResponsiveNavigationMenuWithIconsHoverEffects";
 import AnimeJSBackgroundAnimationEffects from "./AnimeJSBackgroundAnimationEffects";
+import GlowingNeonLightTextRevealAnimationEffects from "./GlowingNeonLightTextRevealAnimationEffects";
 
 const projects = [
   {
@@ -42,6 +43,12 @@ const projects = [
       <AnimeJSBackgroundAnimationEffects></AnimeJSBackgroundAnimationEffects>
     ),
     name: "Anime JS Background Animation Effects",
+  },
+  {
+    Component: (
+      <GlowingNeonLightTextRevealAnimationEffects></GlowingNeonLightTextRevealAnimationEffects>
+    ),
+    name: "Glowing Neon Light Text Reveal Animation Effects",
   },
 ];
 export default projects;
