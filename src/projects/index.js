@@ -3,6 +3,7 @@ import ResponsiveNavigationMenuChangeBackgroundImageOnListItemHover from "./Resp
 import CurtainLayerMenuResponsiveFullscreenOverlayNavigationMenu from "./CurtainLayerMenuResponsiveFullscreenOverlayNavigationMenu";
 import ResponsiveGlassmorphismCardHoverEffects from "./ResponsiveGlassmorphismCardHoverEffects";
 import ResponsiveNavigationMenuWithIconsHoverEffects from "./ResponsiveNavigationMenuWithIconsHoverEffects";
+import AnimeJSBackgroundAnimationEffects from "./AnimeJSBackgroundAnimationEffects";
 
 const projects = [
   {
@@ -35,6 +36,12 @@ const projects = [
       <ResponsiveNavigationMenuWithIconsHoverEffects></ResponsiveNavigationMenuWithIconsHoverEffects>
     ),
     name: "Responsive Navigation Menu With Icons Hover Effects",
+  },
+  {
+    Component: (
+      <AnimeJSBackgroundAnimationEffects></AnimeJSBackgroundAnimationEffects>
+    ),
+    name: "Anime JS Background Animation Effects",
   },
 ];
 export default projects;
