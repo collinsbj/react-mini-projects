@@ -32,6 +32,10 @@ export default function AnimeJSBackgroundAnimationEffects() {
 
   useEffect(() => {
     animateBlocks();
+
+    return function cleanup() {
+      animationRef.current = null;
+    };
   });
 
   return (
