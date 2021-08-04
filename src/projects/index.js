@@ -12,8 +12,13 @@ import CornerTextParallaxEffect from "./CornerTextParallaxEffect";
 import CreditCardPaymentForm from "./CreditCardPaymentForm";
 import WaterWaveTextAnimationEffect from "./WaterWaveTextAnimationEffect";
 import ParticleEffectsonMousemove from "./ParticleEffectsonMousemove";
+import SplitVideoOnPageScroll from "./SplitVideoOnPageScroll";
 
 const projects = [
+  {
+    Component: <SplitVideoOnPageScroll></SplitVideoOnPageScroll>,
+    name: "Split Video On Page Scroll",
+  },
   {
     Component: <ParticleEffectsonMousemove></ParticleEffectsonMousemove>,
     name: "Particle Effects on Mousemove",
