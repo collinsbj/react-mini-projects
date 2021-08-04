@@ -1,4 +1,4 @@
-import styles from "./App.module.css";
+import styles from "./App.module.scss";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import projects from "./projects";
 
@@ -23,13 +23,15 @@ function App() {
                 if (nameA > nameB) return 1;
                 return 0;
               })
-              .map(({ name }) => {
+              .map(({ name }, index) => {
                 return (
                   <Link
                     key={`link${convertToKebabCase(name)}`}
                     to={convertToKebabCase(name)}
+                    className={styles.button}
+                    style={{ "--i": index + 1 }}
                   >
-                    <button>{name}</button>
+                    <div>{name}</div>
                   </Link>
                 );
               })}

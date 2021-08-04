@@ -1,0 +1,22 @@
+.projectWrapper {
+  section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .particles {
+      position: relative;
+      mix-blend-mode: screen;
+      background: #fff;
+    }
+  }
+}

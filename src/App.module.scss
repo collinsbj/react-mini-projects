@@ -1,0 +1,45 @@
+$dark-sky-blue: #89c5d3;
+$ceil: #8c9dcf;
+$lavender-purple: #957dad;
+$cambridge-blue: #a3c9a6;
+$sea-foam-green: #a9dbc7;
+$thistle: #e0bbe4;
+$metallic-pink: #e8acbd;
+$light-orange: #fedbb2;
+$lumber: #ffdfd3;
+$papaya-whip: #fff3cf;
+
+$colors: $dark-sky-blue, $ceil, $lavender-purple, $cambridge-blue,
+  $sea-foam-green, $thistle $metallic-pink, $light-orange, $lumber, $papaya-whip;
+
+.buttonWrapper {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.button {
+  height: 33.334vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.4em;
+  color: rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+
+  @for $i from 1 through length($colors) {
+    &:nth-child(#{length($colors)}n + #{$i}) {
+      background: nth($colors, $i);
+      opacity: 0.7;
+    }
+
+    &:nth-child(#{length($colors)}n + #{$i}):hover {
+      opacity: 1;
+    }
+  }
+}
