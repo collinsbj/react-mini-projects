@@ -13,8 +13,20 @@ import CreditCardPaymentForm from "./CreditCardPaymentForm";
 import WaterWaveTextAnimationEffect from "./WaterWaveTextAnimationEffect";
 import ParticleEffectsonMousemove from "./ParticleEffectsonMousemove";
 import SplitVideoOnPageScroll from "./SplitVideoOnPageScroll";
+import GlassCard from "./GlassCard";
+import NavigationMenuCurveOutsideinActiveTab from "./NavigationMenuCurveOutsideinActiveTab";
 
 const projects = [
+  {
+    Component: (
+      <NavigationMenuCurveOutsideinActiveTab></NavigationMenuCurveOutsideinActiveTab>
+    ),
+    name: "Navigation Menu - Curve Outside in Active Tab",
+  },
+  {
+    Component: <GlassCard></GlassCard>,
+    name: "Glass Card",
+  },
   {
     Component: <SplitVideoOnPageScroll></SplitVideoOnPageScroll>,
     name: "Split Video On Page Scroll",
