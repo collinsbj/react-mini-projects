@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./styles.module.scss";
 import clsx from "clsx";
 
-export default function CurtainLayerMenuResponsiveFullscreenOverlayNavigationMenu() {
+export default function ResponsiveFullscreenCurtainLayerMenu() {
   const [isActive, setIsActive] = useState(false);
 
   const toggle = () => {

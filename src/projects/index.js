@@ -1,6 +1,6 @@
 import GlassmorphismPureCSSCircularProgressBar from "./GlassmorphismPureCSSCircularProgressBar";
 import ResponsiveNavigationMenuChangeBackgroundImageOnListItemHover from "./ResponsiveNavigationMenuChangeBackgroundImageOnListItemHover";
-import CurtainLayerMenuResponsiveFullscreenOverlayNavigationMenu from "./CurtainLayerMenuResponsiveFullscreenOverlayNavigationMenu";
+import ResponsiveFullscreenCurtainLayerMenu from "./ResponsiveFullscreenCurtainLayerMenu";
 import ResponsiveGlassmorphismCardHoverEffects from "./ResponsiveGlassmorphismCardHoverEffects";
 import ResponsiveNavigationMenuWithIconsHoverEffects from "./ResponsiveNavigationMenuWithIconsHoverEffects";
 import AnimeJSBackgroundAnimationEffects from "./AnimeJSBackgroundAnimationEffects";
@@ -50,9 +50,9 @@ const projects = [
   },
   {
     Component: (
-      <CurtainLayerMenuResponsiveFullscreenOverlayNavigationMenu></CurtainLayerMenuResponsiveFullscreenOverlayNavigationMenu>
+      <ResponsiveFullscreenCurtainLayerMenu></ResponsiveFullscreenCurtainLayerMenu>
     ),
-    name: "Curtain Layer Menu | Responsive Fullscreen Overlay Navigation Menu",
+    name: "Responsive Fullscreen Curtain Layer Menu",
   },
   {
     Component: (

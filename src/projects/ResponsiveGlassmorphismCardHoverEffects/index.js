@@ -4,7 +4,7 @@ import desingpng from "./assets/design.png";
 import earnpng from "./assets/earn.png";
 import launchpng from "./assets/launch.png";
 
-export default function CurtainLayerMenuResponsiveFullscreenOverlayNavigationMenu() {
+export default function ResponsiveFullscreenCurtainLayerMenu() {
   return (
     <div className={styles.body}>
       <div className={styles.container}>

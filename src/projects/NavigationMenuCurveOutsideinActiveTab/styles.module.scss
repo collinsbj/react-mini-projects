@@ -16,7 +16,7 @@
     box-shadow: 10px 0 0 #4187f6;
     border-left: 10px solid #2b343b;
     overflow-x: hidden;
-    transition: width 3s;
+    transition: width 0.5s;
 
     &:hover {
       width: 300px;
@@ -37,7 +37,8 @@
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
 
-        &.active {
+        &.active,
+        &:hover {
           background: #4187f6;
 
           .link {

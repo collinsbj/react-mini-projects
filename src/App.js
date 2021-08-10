@@ -31,7 +31,7 @@ function App() {
                     className={styles.button}
                     style={{ "--i": index + 1 }}
                   >
-                    <div>{name}</div>
+                    <h1>{name}</h1>
                   </Link>
                 );
               })}

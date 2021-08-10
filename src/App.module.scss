@@ -9,38 +9,50 @@ $light-orange: #fedbb2;
 $lumber: #ffdfd3;
 $papaya-whip: #fff3cf;
 
-$colors: $dark-sky-blue, $ceil, $lavender-purple, $cambridge-blue,
-  $sea-foam-green, $thistle, $metallic-pink, $light-orange, $lumber,
-  $papaya-whip;
+$background-colors: rgb(229, 39, 14), rgb(255, 209, 0), rgb(40, 41, 43),
+  rgb(253, 67, 68), rgb(196, 50, 83), rgb(242, 90, 16), rgb(184, 35, 126),
+  rgb(30, 59, 52), rgb(238, 217, 116), rgb(239, 61, 74), rgb(234, 24, 33),
+  rgb(255, 0, 70), rgb(252, 59, 45), rgb(30, 59, 52), rgb(253, 103, 73),
+  rgb(251, 254, 85), rgb(26, 11, 202), rgb(239, 232, 216), rgb(240, 47, 59),
+  rgb(43, 100, 169), rgb(1, 83, 151), rgb(240, 63, 53), rgb(22, 195, 123),
+  rgb(253, 102, 124), rgb(255, 140, 139), rgb(164, 134, 65);
+
+$colors: rgb(126, 189, 193), rgb(222, 16, 222), rgb(177, 253, 234),
+  rgb(1, 83, 151), rgb(211, 183, 56), rgb(102, 20, 200), rgb(109, 161, 174),
+  rgb(225, 0, 0), rgb(40, 41, 43), rgb(150, 203, 209), rgb(27, 29, 28),
+  rgb(40, 41, 43), rgb(14, 47, 86), rgb(255, 140, 139), rgb(38, 102, 145),
+  rgb(10, 100, 192), rgb(251, 155, 42), rgb(255, 69, 82), rgb(72, 27, 25),
+  rgb(247, 206, 23), rgb(253, 67, 68), rgb(182, 227, 228), rgb(244, 244, 244),
+  rgb(207, 209, 221), rgb(130, 30, 116), rgb(32, 36, 72);
 
 .buttonWrapper {
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .button {
-  height: 33.334vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   padding: 60px;
   font-family: "Roboto", sans-serif;
-  font-size: 24px;
   text-align: center;
-  line-height: 1.4em;
+  font-size: 5vw;
   color: rgba(0, 0, 0, 0.5);
   transition: 0.2s;
 
-  @for $i from 1 through length($colors) {
-    &:nth-child(#{length($colors)}n + #{$i}) {
-      background: nth($colors, $i);
-      opacity: 0.7;
+  @for $i from 1 through length($background-colors) {
+    &:nth-child(#{length($background-colors)}n + #{$i}) {
+      background: nth($background-colors, $i);
+      color: nth($colors, $i);
     }
 
-    &:nth-child(#{length($colors)}n + #{$i}):hover {
-      opacity: 1;
+    &:nth-child(#{length($background-colors)}n + #{$i}):hover {
+      background: nth($colors, $i);
+      color: nth($background-colors, $i);
     }
   }
 }
