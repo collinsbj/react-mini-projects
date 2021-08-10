@@ -56,3 +56,64 @@ $colors: rgb(126, 189, 193), rgb(222, 16, 222), rgb(177, 253, 234),
     }
   }
 }
+.search {
+  width: 400px;
+  position: fixed;
+  top: -52px;
+  right: 100px;
+  background: #fff;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: 0.3s;
+
+  &.open {
+    top: 0;
+  }
+
+  input {
+    width: 100%;
+    outline: none;
+    border: 1px solid lightgray;
+    font-size: 24px;
+  }
+
+  button {
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    display: block;
+    background: #fff;
+    font-size: 24px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    padding: 2px 7px 2px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    &::before {
+      background: transparent;
+      content: "";
+      box-shadow: 7px -7px 0 #fff;
+      position: absolute;
+      top: 0px;
+      left: -15px;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+    }
+
+    &::after {
+      background: transparent;
+      content: "";
+      box-shadow: -7px -7px 0 #fff;
+      position: absolute;
+      top: 0px;
+      left: 100%;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+    }
+  }
+}

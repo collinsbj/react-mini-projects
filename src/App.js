@@ -1,6 +1,8 @@
 import styles from "./App.module.scss";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import projects from "./projects";
+import { useState } from "react";
+import clsx from "clsx";
 
 const convertToKebabCase = (string) => {
   return string
@@ -10,10 +12,23 @@ const convertToKebabCase = (string) => {
 };
 
 function App() {
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [search, setSearch] = useState("");
+
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
+          <div className={clsx(styles.search, { [styles.open]: searchOpen })}>
+            <input
+              type="text"
+              onChange={(e) => setSearch(e.target.value)}
+              onBlur={() => setSearchOpen(false)}
+            ></input>
+            <button onClick={() => setSearchOpen(!searchOpen)}>
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+          </div>
           <div className={styles.buttonWrapper}>
             {projects
               .sort((a, b) => {
@@ -23,6 +38,9 @@ function App() {
                 if (nameA > nameB) return 1;
                 return 0;
               })
+              .filter((project) =>
+                project.name.toLowerCase().includes(search.toLowerCase())
+              )
               .map(({ name }, index) => {
                 return (
                   <Link
