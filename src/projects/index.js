@@ -15,8 +15,13 @@ import ParticleEffectsonMousemove from "./ParticleEffectsonMousemove";
 import SplitVideoOnPageScroll from "./SplitVideoOnPageScroll";
 import GlassCard from "./GlassCard";
 import NavigationMenuCurveOutsideinActiveTab from "./NavigationMenuCurveOutsideinActiveTab";
+import NextLevelVideoandTextEffects from "./NextLevelVideoandTextEffects";
 
 const projects = [
+  {
+    Component: <NextLevelVideoandTextEffects></NextLevelVideoandTextEffects>,
+    name: "Next Level Video and Text Effects",
+  },
   {
     Component: (
       <NavigationMenuCurveOutsideinActiveTab></NavigationMenuCurveOutsideinActiveTab>

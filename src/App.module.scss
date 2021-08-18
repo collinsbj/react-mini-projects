@@ -28,11 +28,11 @@ $colors: rgb(126, 189, 193), rgb(222, 16, 222), rgb(177, 253, 234),
 .buttonWrapper {
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .button {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,9 +40,9 @@ $colors: rgb(126, 189, 193), rgb(222, 16, 222), rgb(177, 253, 234),
   padding: 60px;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  font-size: 5vw;
+  font-size: 2vw;
   color: rgba(0, 0, 0, 0.5);
-  transition: 0.2s;
+  transition: 0.5s;
 
   @for $i from 1 through length($background-colors) {
     &:nth-child(#{length($background-colors)}n + #{$i}) {
