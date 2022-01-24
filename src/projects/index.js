@@ -16,8 +16,13 @@ import SplitVideoOnPageScroll from "./SplitVideoOnPageScroll";
 import GlassCard from "./GlassCard";
 import NavigationMenuCurveOutsideinActiveTab from "./NavigationMenuCurveOutsideinActiveTab";
 import NextLevelVideoandTextEffects from "./NextLevelVideoandTextEffects";
+import SpinnyLayers from "./SpinnyLayers";
 
 const projects = [
+  {
+    Component: <SpinnyLayers></SpinnyLayers>,
+    name: "Spinny Layers",
+  },
   {
     Component: <NextLevelVideoandTextEffects></NextLevelVideoandTextEffects>,
     name: "Next Level Video and Text Effects",
