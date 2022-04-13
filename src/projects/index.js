@@ -17,8 +17,13 @@ import GlassCard from "./GlassCard";
 import NavigationMenuCurveOutsideinActiveTab from "./NavigationMenuCurveOutsideinActiveTab";
 import NextLevelVideoandTextEffects from "./NextLevelVideoandTextEffects";
 import SpinnyLayers from "./SpinnyLayers";
+import RotateyIcons from "./RotateyIcons";
 
 const projects = [
+  {
+    Component: <RotateyIcons></RotateyIcons>,
+    name: "Rotatey Icons",
+  },
   {
     Component: <SpinnyLayers></SpinnyLayers>,
     name: "Spinny Layers",

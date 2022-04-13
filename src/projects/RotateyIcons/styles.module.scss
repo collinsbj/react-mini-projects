@@ -1,0 +1,206 @@
+@use "sass:color";
+
+.projectWrapper {
+  --green: rgb(157, 220, 160);
+  --green-dark: #1E8323;
+  --pink: rgb(208, 153, 213);
+  --pink-dark: #701778;
+  --blue: rgb(157, 188, 220);
+  --blue-dark: #1E5083;
+  --orange: rgb(251, 203, 140);
+  --orange-dark: #D07908;
+  --purple: rgb(167, 175, 221);
+  --purple-dark: #2E3B84;
+  --yellow: rgb(242, 234, 160);
+  --yellow-dark: #686016;
+  --brown: rgb(208, 164, 142);
+  --brown-dark: #7F5C4C;
+  --red: rgb(230, 158, 158);
+  --red-dark: #932020;
+
+  --bubble-size: 125px;
+
+  font-family: system-ui;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #EFF7FF;
+
+  .sol {
+    width: 181px;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      &:last-child:hover {
+        opacity: 0;
+        transition: opacity 500ms;
+      }
+    }
+  }
+
+  .planets {
+      animation: rotate 60s linear infinite;
+
+      .bubble {
+      width: var(--bubble-size);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      position: relative;
+      color: white;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      animation: pulse .85s ease-in-out alternate infinite;
+      transform: translate(var(--translate-x), var(--translate-y) );
+
+      img, div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: revolve 60s linear infinite;
+    }
+
+      div {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        transition: opacity 500ms;
+        border-radius: 50%;
+        font-size: 17px;
+      }
+
+      &:hover div {
+        opacity: 1;
+      }
+
+      &:nth-child(1) {
+        --translate-x: calc(-50% + (var(--bubble-size) * 1.5));
+        --translate-y: calc(-50% + (var(--bubble-size) * 1.5));
+      background-color: var(--red);
+      animation-delay: 625ms;
+
+        div {
+          background-color: var(--red-dark);
+        }
+      }
+
+      &:nth-child(2) {
+        --translate-x: -50%;
+        --translate-y: calc(-50% + (var(--bubble-size) * 2));
+        background-color: var(--brown);
+        animation-delay: 375ms;
+
+        div {
+          background-color: var(--brown-dark);
+        }
+      }
+
+      &:nth-child(3) {
+        --translate-x: calc(-50% - (var(--bubble-size) * 1.5));
+        --translate-y: calc(-50% + (var(--bubble-size) * 1.5));
+        background-color: var(--yellow);
+        animation-delay: 125ms;
+
+        div {
+          background-color: var(--yellow-dark);
+        }
+      }
+
+      &:nth-child(4) {
+        --translate-x: calc(-50% - (var(--bubble-size) * 2));
+        --translate-y: -50%;
+        background-color: var(--purple);
+        animation-delay: 1000ms;
+
+        div {
+          background-color: var(--purple-dark);
+        }
+      }
+
+      &:nth-child(5) {
+        --translate-x: calc(-50% - (var(--bubble-size) * 1.5));
+        --translate-y: calc(-50% - (var(--bubble-size) * 1.5));
+        background-color: var(--orange);
+        animation-delay: 875ms;
+
+        div {
+          background-color: var(--orange-dark);
+        }
+      }
+
+      &:nth-child(6) {
+        --translate-x: -50%;
+        --translate-y: calc(-50% - (var(--bubble-size) * 2));
+        background-color: var(--blue);
+        animation-delay: 500ms;
+
+        div {
+          background-color: var(--blue-dark);
+        }
+      }
+
+      &:nth-child(7) {
+        --translate-x: calc(-50% + (var(--bubble-size) * 1.5));
+        --translate-y: calc(-50% - (var(--bubble-size) * 1.5));
+        background-color: var(--green);
+        animation-delay: 750ms;
+
+        div {
+          background-color: var(--green-dark);
+        }
+      }
+
+      &:nth-child(8) {
+        --translate-x: calc(-50% + (var(--bubble-size) * 2));
+        --translate-y: -50%;
+        background-color: var(--pink);
+        animation-delay: 250ms;
+
+        div {
+          background-color: var(--pink-dark);
+        }
+      }
+    }
+  }
+
+  .planets:has(.bubble:hover) {
+    animation-play-state: paused;
+
+    div:not(.bubble), img {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes pulse {
+    to {
+      transform: translate(var(--translate-x), var(--translate-y)) scale(1.1);
+    }
+  }
+
+  @keyframes revolve {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-1turn);
+    }
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
